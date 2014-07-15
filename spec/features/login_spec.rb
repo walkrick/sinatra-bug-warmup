@@ -2,8 +2,12 @@ feature "Registration" do
   scenario "A user can create an account and log in" do
     visit "/"
 
+    click_link "Register"
+
+    fill_in "Username", with: "huntanumba1"
     fill_in "Email", with: "hunter@example.com"
     fill_in "Password", with: "1234"
+    check "I legally verify that my name is actually Hunter"
 
     click_button "Register"
 

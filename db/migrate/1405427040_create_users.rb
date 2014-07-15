@@ -3,7 +3,8 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :password
-      t.boolean :agree_to_terms, null: false
+      t.string :email
+      t.boolean :name_is_hunter, null: false
     end
   end
 end
